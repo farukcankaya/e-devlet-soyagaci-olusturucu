@@ -1,5 +1,3 @@
-$('.contentToolbar').append('<li><a class="soysopuduzgungoster">🌲 Soyağacını Şemada Göster</a></li>');
-
 rows = $('table.resultTable tbody').children('tr');
 index=0;
 var all_data=[]
@@ -14,8 +12,12 @@ rows.each(function () { index++;
 	}
 });
 
+if(all_data.length > 0){
+	$('.contentToolbar').append('<li><a class="soysopuduzgungoster">🌲 Soyağacını Şemada Göster</a></li>');
+}
+
 $('.soysopuduzgungoster').on('click', function(){
-	chrome.runtime.sendMessage({greeting: "hello", all_data: all_data}, function(response) {
-	  console.log(response.farewell);
+	chrome.runtime.sendMessage({open: "tree", all_data: all_data}, function(response) {
+	  console.log(response.status);
 	});
 });

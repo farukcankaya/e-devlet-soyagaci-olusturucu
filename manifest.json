@@ -4,7 +4,7 @@
 	"description": "E-Devlettin verdiği anlaşılmaz tabloyu sizden başlayarak dallandırarak şema halinde görmenizi sağlar.",
 	"author":"Faruk Cankaya",
 	"homepage_url":"https://github.com/farukcankaya/e-devlet-soyagaci-olusturucu",
-	"version": "0.1",
+	"version": "0.2",
 	"content_scripts": [
 		{
 			"matches": ["https://www.turkiye.gov.tr/nvi-alt-ust-soy-bilgisi-sorgulama"],
