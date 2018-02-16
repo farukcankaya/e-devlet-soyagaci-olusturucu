@@ -94,6 +94,15 @@ $(function () {
 	$("input[name='medenihal']").prop('checked', medenihal=='true');
 	$("input[name='vaziyet']").prop('checked', vaziyet=='true');
 
+	$(".goster").on('click', function(){
+		$("div.management").show();
+		$(".goster").hide();
+	});
+	$(".gizle").on('click', function(){
+		$("div.management").hide();
+		$(".goster").show();
+	});
+
 	$("div.management > input").on('click', function(){
 		var ana = $("input[name='ana']").is(":checked");
 		var baba = $("input[name='baba']").is(":checked");
